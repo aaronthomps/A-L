@@ -1,0 +1,18 @@
+Search Text: file
+Total Files: 2
+Total Occurrences: 7
+Total Lines: 6
+File: C:\Users\aaron\Documents\AL\TextSearch\TextSearch.csproj
+Occurrences: 0
+
+
+File: C:\Users\aaron\Documents\AL\TextSearch\FileSearch.cs
+Occurrences: 7
+        var files = Directory.GetFiles(dirPath, "*.*", SearchOption.TopDirectoryOnly);
+        Parallel.ForEach(files, (file) =>
+            var result = FindText(file, searchText);
+    private static FileSearchResult FindText(string file, string searchText)
+        using var reader = new StreamReader(file);
+            FilePath = file,
+
+

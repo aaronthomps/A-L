@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeConsoleApp", "Pal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextSearch", "TextSearch\TextSearch.csproj", "{2BC6700E-71EC-41CB-A94B-FFDA5913E261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindTextConsoleApp", "FindTextConsoleApp\FindTextConsoleApp.csproj", "{A6311FAA-0697-4CDB-B806-B9E8B8A0577A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{2BC6700E-71EC-41CB-A94B-FFDA5913E261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BC6700E-71EC-41CB-A94B-FFDA5913E261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BC6700E-71EC-41CB-A94B-FFDA5913E261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6311FAA-0697-4CDB-B806-B9E8B8A0577A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6311FAA-0697-4CDB-B806-B9E8B8A0577A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6311FAA-0697-4CDB-B806-B9E8B8A0577A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6311FAA-0697-4CDB-B806-B9E8B8A0577A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
