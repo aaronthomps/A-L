@@ -1,0 +1,12 @@
+WITH PoiCte as (
+select
+    ROW_NUMBER() OVER() as 'PurchaseDetailItemAutoId',
+    d.PurchaseOrderNumber,
+    ROW_NUMBER() OVER(PARTITION BY d.PurchaseOrderNumber, d.ItemNumber, d.PurchasePrice, d.PurchaseQuantity) as 'LineNumber',
+    ItemNumber
+from
+    PurchaseDetailItem d
+)
+select *
+from PoiCte
+where LineNumber > 1

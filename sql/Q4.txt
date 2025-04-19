@@ -1,0 +1,13 @@
+select
+    ROW_NUMBER() OVER() as 'PurchaseDetailItemAutoId',
+    d.PurchaseOrderNumber,
+    ROW_NUMBER() OVER(PARTITION BY d.PurchaseOrderNumber, d.ItemNumber ORDER BY d.PurchaseOrderNumber, d.ItemName) as 'LineNumber',
+    ItemNumber,
+    ItemName,
+    ItemDescription,
+    PurchasePrice,
+    PurchaseQuantity,
+    LastModifiedByUser,
+    LastModifiedDateTime
+from
+    PurchaseDetailItem d
