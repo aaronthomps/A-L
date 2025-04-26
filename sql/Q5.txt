@@ -3,7 +3,7 @@ select
     d.PurchaseDetailItemAutoId,
     d.PurchaseOrderNumber,
     ROW_NUMBER() OVER(PARTITION BY d.PurchaseOrderNumber, d.ItemNumber, d.PurchasePrice, d.PurchaseQuantity) as 'LineNumber',
-    ItemNumber
+    d.ItemNumber
 from
     PurchaseDetailItem d
 )

@@ -5,13 +5,13 @@ select
     d.PurchaseDetailItemAutoId,
     d.PurchaseOrderNumber,
     ROW_NUMBER() OVER(PARTITION BY d.PurchaseOrderNumber, d.ItemNumber ORDER BY d.PurchaseOrderNumber, d.ItemName) as 'LineNumber',
-    ItemNumber,
-    ItemName,
-    ItemDescription,
-    PurchasePrice,
-    PurchaseQuantity,
-    LastModifiedByUser,
-    LastModifiedDateTime
+    d.ItemNumber,
+    d.ItemName,
+    d.ItemDescription,
+    d.PurchasePrice,
+    d.PurchaseQuantity,
+    d.LastModifiedByUser,
+    d.LastModifiedDateTime
 from
     PurchaseDetailItem d
 END

@@ -1,7 +1,7 @@
 select
-    d.PurchaseDetailItemAutoId,
-    d.PurchaseOrderNumber,
-    ROW_NUMBER() OVER(PARTITION BY d.PurchaseOrderNumber, d.ItemNumber ORDER BY d.PurchaseOrderNumber, d.ItemName) as 'LineNumber',
+    PurchaseDetailItemAutoId,
+    PurchaseOrderNumber,
+    ROW_NUMBER() OVER(PARTITION BY PurchaseOrderNumber, ItemNumber ORDER BY PurchaseOrderNumber, ItemName) as 'LineNumber',
     ItemNumber,
     ItemName,
     ItemDescription,
@@ -10,4 +10,4 @@ select
     LastModifiedByUser,
     LastModifiedDateTime
 from
-    PurchaseDetailItem d
+    PurchaseDetailItem
